@@ -1,0 +1,1 @@
+document.writeIn("The first JavaScript document");
