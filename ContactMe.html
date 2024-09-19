@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>ContactMe.html</title>
+  <meta charset="UTF-8">
+  <body>
+<iframe 
+width="560" 
+height="315" 
+src="https://www.youtube.com/embed/mqjx4BT_-BY?si=uGDBHe1lG3LAQyNN" 
+title="YouTube video player" 
+style="border: none;"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" 
+allowfullscreen></iframe>
+
+
+<form action="/action_page.php">
+    <fieldset>
+      <legend>Feedback:</legend>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="anonymous" required><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" placeholder="anonymous" required><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="mail" placeholder="name@domain.com" required>
+      <p>Will you recommend this website?</p>
+				<p> <input type="radio" name ="yes" value="yes"> Yes</p>
+				<p> <input type="radio" name ="no" value="no"> No</p>
+                <p>
+                    What is your favorite website?
+                    <select name="device" size="2" multiple>
+                      <option value="google">Google</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="Twitter">Twitter</option>
+                      <option value="Time">Time</option>
+                      <option value="YouTube">YouTube</option>
+                      <option value="Instagram">Instagram</option>
+                    </select>
+                  
+                  <p>
+                  <label for="rating">Rating of the website on a scale of 1 to 10:</label>
+                  <input type="range" id="rating" name="rating" min="1" max="10" step="1">
+                  </p>
+                  <p>
+					<textarea name="comment" rows="20" cols="100" autofocus>Enter additional comments: </textarea>
+				</p>
+        <p> What is your favorite browser?</p>
+        <p><input  type="checkbox" name="browser" value="Brave">Brave</p>
+				<p><input  type="checkbox" name="browser" value="Edge">Edge</p>
+				<p><input  type="checkbox" name="browser" value="Chrome">Chrome</p>
+				<p><input  type="checkbox" name="browser" value="FireFox">FireFox</p>
+				<p><input  type="checkbox" name="browser" value="DuckDuckGo">DuckDuckGo</p>
+				<p><input  type="checkbox" name="browser" value="Opera">Opera</p>
+				<p><input  type="checkbox" name="browser" value="LibreWolf">LibreWolf</p>
+       
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+        <label for="birthdaytime">Your Birthday (date and time):</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+
+</body>
+</html>
