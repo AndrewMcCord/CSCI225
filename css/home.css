@@ -1,0 +1,16 @@
+div.introduction, div.navigation, div.footer {
+    position: fixed;
+    /*margin-top: -5%;*/
+    width: var(--page-width);
+    top: var(--page-top-position);
+    background-image: url(../img/newspaper3.jpg);
+}
+div.introduction{
+    left:50%;
+}
+div.navigation {
+    right:18%;
+}
+div.footer {
+    left:35%;
+}
