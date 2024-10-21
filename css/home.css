@@ -1,16 +1,131 @@
-div.introduction, div.navigation, div.footer {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply the font to all paragraphs */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Optional: set a base font size */
+    color: #333;
+    line-height: 100%;
+    text-align: left;
+}
+
+p::first-letter {
+    color: #080ba8;       /* Change the color of the first letter */
+    font-size: 2em;       /* Increase the size of the first letter */
+    font-weight: bold;    /* Make the first letter bold */
+    font-family: 'Georgia', serif; /* Change the font family */
+    float: left;          /* Float it to the left (optional) */
+    margin-right: 5px;    /* Add space between the letter and the rest of the text */
+}
+
+div.introduction, div.navbar, footer {
     position: fixed;
-    /*margin-top: -5%;*/
-    width: var(--page-width);
-    top: var(--page-top-position);
-    background-image: url(../img/newspaper3.jpg);
+    z-index: 2;
 }
-div.introduction{
-    left:50%;
+div.introduction p{
+    float: left;
+    width: 70%;
 }
-div.navigation {
+
+div.introduction img{
+    width: 30%;
+    float: right;
+}
+div.navbar {
     right:18%;
 }
-div.footer {
-    left:35%;
+
+div.extra1{
+    position: fixed;
+    float: right;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+   /* background-image: url(../img/newspaper3.jpg); */
+}
+
+div.assignment {
+    position: absolute;
+    float: right;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+}
+
+header h1{
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    border: 10px solid transparent; /* Set a solid transparent border first */
+    border-image: url('your-border-image.png') 30 round; /* Add image as border */
+    padding: 20px;  /* Add padding inside the border */
+    transition: all 4s ease-in-out;
+}
+
+h1:hover{
+transform: scale(1.2);
+}
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;      /* Change color when hovered */
+    text-decoration: underline; /* Underline the text on hover */
+    font-weight: bold;
+}
+nav ul {
+    list-style-type: none;    /* Removes the bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+nav ul li {
+    display: inline;          /* Displays the list items in one line */
+    margin-right: 20px;       /* Adds space between the list items */
+    padding: 10px;            /* Adds padding inside the list items */
+    border: 2px solid #3498db; /* Adds a border to each item */
+    border-radius: 10px; 
+}
+
+nav ul li:last-child {
+    margin-right: 0;          /* Removes the margin after the last item */
+}
+
+footer {
+    left:5%;
+}
+div.extra2{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height:var(--bottom-bar-height);
+    background-image: url(../img/water.webp);
+}
+div.portfolio, div.address, div.schedule {
+    position: relative;
+    top: 200px;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+div.portfolio {
+    box-shadow: #3498db;
+}
+
+table {
+    border: 2px solid #3498db;
+    padding: 10px;  
+    vertical-align: middle;
+    empty-cells: show;
+}
+table tr:nth-child(even) {
+    background-color: #08790e; /* Light gray background for even rows */
 }
