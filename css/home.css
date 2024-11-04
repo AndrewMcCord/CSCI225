@@ -2,25 +2,27 @@
 
 /* Apply the font to all paragraphs */
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    text-align: left; 
     font-size: 16px; /* Optional: set a base font size */
     color: #333;
     line-height: 100%;
-    text-align: left;
 }
 
 p::first-letter {
     color: #080ba8;       /* Change the color of the first letter */
     font-size: 2em;       /* Increase the size of the first letter */
     font-weight: bold;    /* Make the first letter bold */
-    font-family: 'Georgia', serif; /* Change the font family */
+    font-family: 'Roboto', sans-serif; /* Change the font family */
     float: left;          /* Float it to the left (optional) */
     margin-right: 5px;    /* Add space between the letter and the rest of the text */
 }
 
 div.introduction, div.navbar, footer {
-    position: fixed;
-    z-index: 2;
+    position: fixed; 
+    font-family: 'Roboto', sans-serif;
+    list-style-image: url(../img/sqpurple.jpg);
+    cursor: pointer;
 }
 div.introduction p{
     float: left;
@@ -32,18 +34,40 @@ div.introduction img{
     float: right;
 }
 div.navbar {
+    /* display: inline-block; */
+    z-index: 5;
+    list-style-image: url(../img/sqpurple.jpg);
+   /* list-style-position: inside; 
+    display: inline-flex; */
     right:18%;
 }
 
+div.navbar li {
+    display: inline-block; 
+    border: 2px solid red;
+    list-style-image: url(../img/sqpurple.jpg);
+    border-radius: 12px;
+    padding: 5px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+  }
+
+  @keyframes example {
+    from {background-color: red;}
+    to {background-color: rgb(0, 255, 0);}
+  }
 body{
     background-image: url(../img/water.webp); 
-    background-repeat: no-repeat;
+    /* backdrop-filter: blur(5px); */
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 
 div.assignment {
     position: absolute;
+    font-family: 'Roboto', sans-serif;
     float: right;
     bottom: 0;
     top: 400px;
@@ -59,37 +83,65 @@ header h1{
 }
 
 h1 {
-    border: 10px solid transparent; /* Set a solid transparent border first */
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    border: 2px solid red; /* Set a solid red border first */
     border-image: url('your-border-image.png') 30 round; /* Add image as border */
-    padding: 20px;  /* Add padding inside the border */
-    transition: all 4s ease-in-out;
+    padding: 5px;  /* Add padding inside the border */
+    border-radius: 12px;
+    transition: all 4s ease-in-out; 
 }
 
 h1:hover{
-transform: scale(1.2);
-}
-a{
-    text-decoration: none;
+    transform: scale(1.2);
 }
 
-a:hover {
-    color: #e74c3c;      /* Change color when hovered */
-    text-decoration: underline; /* Underline the text on hover */
+a{
+    text-decoration: none;
+    color: #020da7;     
     font-weight: bold;
 }
+link{
+    text-decoration: none;
+}
+a:hover {
+    color: #e74c3c;      /* Change color when hovered */
+    text-decoration: none; /* Underline the text on hover */
+    font-style: italic;
+    font-weight: bold;
+    background: yellow;
+}
+
+ul, ol, li {
+    color: #020da7;        /* Replace with your chosen color */
+    font-weight: bold;   /* Adjust weight as needed (e.g., 400, 600) */
+    list-style-image: url(../img/sqpurple.jpg);
+  }
+
+ul {
+    list-style-image: url(../img/sqpurple.jpg);
+}
 nav ul {
-    list-style-type: none;    /* Removes the bullets */
+    display: inline-block; 
+    list-style-type: square;    /* Removes the bullets */
     padding: 0;
     margin: 0;
     display: flex; 
+    color: #020da7;        /* Replace with your chosen color */
+    font-weight: bold; 
+    list-style-image: url(../img/sqpurple.jpg);
 }
 
 nav ul li {
-    display: inline;          /* Displays the list items in one line */
+    display: inline-block;          /* Displays the list items in one line */
     margin-right: 20px;       /* Adds space between the list items */
     padding: 10px;            /* Adds padding inside the list items */
-    border: 2px solid #3498db; /* Adds a border to each item */
-    border-radius: 10px; 
+    border: 2px solid #880202; /* Adds a border to each item */
+    border-radius: 12px; 
+    color: #020da7;        /* Replace with your chosen color */
+    font-weight: bold; 
+    list-style-image: url(../img/sqpurple.jpg);
 }
 
 nav ul li:last-child {
@@ -115,25 +167,42 @@ div.extra2{
 }
 div.portfolio, div.address, div.schedule {
     position: relative;
+    font-family: 'Roboto', sans-serif;
     top: 200px;
     border-right: 3px solid #fff;
     border-bottom: 3px solid #fff;
 }
+
 div.schedule{
     width: 70%
 }
 
 
-div.portfolio {
-    box-shadow: #3498db;
+/* div.portfolio {
+    padding: 10px;
+} */
+.portfolio ol li:first-child {
+    box-shadow: 0px 4px 8px rgb(218, 255, 5); /* Adjust shadow properties as needed */
+    padding: 10px; /* Optional: adds some space to better show the shadow */
+    border-radius: 4px; 
 }
-
 table {
-    border: 2px solid #3498db;
+    border: 2px; /*solid #31036d;*/
     padding: 10px;  
-    vertical-align: middle;
+    vertical-align: baseline;
     empty-cells: show;
 }
+
+.course-schedule table th, table td {
+    border: 2px solid #4f08ac;    /* Apply border to table cells */
+    /* padding: 8px; */               /* Space inside each cell */
+    vertical-align: middle;     /* Align text vertically in the middle */
+  }
+  
+.course-schedule table td {
+    empty-cells: show;          /* Show borders for empty cells */
+    vertical-align: middle; 
+  }
 table tr:nth-child(even) {
-    background-color: #08790e; /* Light gray background for even rows */
+    background-color: #08790e; /* Green background for even rows */
 }
