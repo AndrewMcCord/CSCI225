@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion Calculator- Length</title>
+</head>
+<body>
+    <h1>Unit Conversion Calculator- Length</h1>
+    <label for="value"></label>
+    <input type="number" id="value1" placeholder="Enter a number">
+    
+    <label for="fromUnit"></label>
+    <select id="fromUnit">
+        <option value="meter">Meter</option>
+        <option value="foot">Foot</option>
+        <option value="inch">Inch</option>
+    </select>
+    
+    <label for="toUnit">=</label>
+    <input type="number" id="value2" placeholder="Answer is here">
+    <select id="toUnit">
+        <option value="meter">Meter</option>
+        <option value="foot">Foot</option>
+        <option value="inch">Inch</option>
+    </select>
+    
+    <button onclick="convert()">Convert</button>
+    
+    <h2 id="result"></h2>
+
+    <script>
+        function convert() {
+            const value = parseFloat(document.getElementById("value1").value);
+            const fromUnit = document.getElementById("fromUnit").value;
+            const toUnit = document.getElementById("toUnit").value;
+
+            const conversionFactors = {
+                meter: 1,
+                centimeter: 100,
+                foot: 3.28084,
+                inch: 39.3701,
+                yard: 1.09361,
+                kilometer: 0.001,
+                mile: 0.000621371
+            };
+
+            if (!conversionFactors[fromUnit] || !conversionFactors[toUnit]) {
+                document.getElementById("result").innerText = "Invalid unit selected.";
+                return;
+            }
+
+            // Convert to meters first, then to the target unit
+            const valueInMeters = value / conversionFactors[fromUnit];
+            const convertedValue = valueInMeters * conversionFactors[toUnit];
+            console.log(convertedValue);
+            document.getElementById("value2").value = `${convertedValue.toFixed(4)}`;
+        }
+        document.getElementById('year').addEventListener('change', getprice, false);
+        condition.addEventListener('change', getprice, false);
+    </script>
+</body>
+</html>
