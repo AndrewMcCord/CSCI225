@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow</title>
+  <style>
+    #slideshow-container {
+      position: relative;
+      width: 1900px;
+      height: 935px;
+      overflow: hidden;
+    }
+    #prev-btn, #next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      width: 1900x;
+      height: 935px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    #prev-btn { left: 10px; }
+    #next-btn { right: 10px; }
+    #slideshow-image {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="slideshow-container">
+    <button id="prev-btn">❮</button>
+    <img id="slideshow-image" src="img/OIP (1).jpg" alt="Slideshow">
+    <button id="next-btn">❯</button>
+  </div>
+  <script>
+    const images = ["img/OIP (1).jpg", "img/sqpurple.jpg", "img/subscribe.jpg", "img/flower.webp", "img/gradient.webp", "img/water.webp"];
+    let currentIndex = 0;
+
+    const slideshowImage = document.getElementById('slideshow-image');
+    const prevButton = document.getElementById('prev-btn');
+    const nextButton = document.getElementById('next-btn');
+
+    function updateImage(index) {
+      slideshowImage.src = images[index];
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage(currentIndex);
+    });
+  </script>
+</body>
+</html>
