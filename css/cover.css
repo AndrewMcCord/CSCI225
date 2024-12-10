@@ -13,7 +13,7 @@ p::first-letter {
     font-size: 2em;       /* Increase the size of the first letter */
     font-weight: bold;    /* Make the first letter bold */
     font-family: cursive; /* Change the font family */
-    float: center;          /* Float it to the left (optional) */
+    text-align: center;          /* Float it to the left (optional) */
     margin-right: 5px;    /* Add space between the letter and the rest of the text */
 }
 
