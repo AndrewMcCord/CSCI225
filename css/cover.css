@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/zombie-holocaust');
 
 p {
     font-family: cursive; 
@@ -24,10 +24,17 @@ body{
     background-attachment: fixed;
 }
 h1{
+    font-family: 'Zombie Holocaust', cursive; 
+    text-align: center; 
+    font-size: 64px; /* Optional: set a base font size */
+    color: #9e1c1c;
+    line-height: 100%;
+}
+h2{
     font-family: cursive; 
     text-align: center; 
     font-size: 32px; /* Optional: set a base font size */
-    color: #333;
+    color: #000000;
     line-height: 100%;
 }
 .button{
